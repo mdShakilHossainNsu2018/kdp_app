@@ -1,13 +1,23 @@
 <template>
-    <v-app id="keep">
+    <v-app  dark>
         <v-app-bar
                 app
                 clipped-left
-                color="amber"
+                dark
+
         >
             <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-            <span class="title ml-3 mr-5">Kdp&nbsp;<span class="font-weight-light">App</span></span>
+
+
+            <span class="title ml-3 mr-5"><v-img
+                    class="mx-2"
+                    src="../src/assets/final_logologoblack.png"
+                    max-height="40"
+                    max-width="40"
+                    contain
+            ></v-img></span>
             <v-text-field
+                    dark
                     solo-inverted
                     flat
                     hide-details
@@ -21,12 +31,12 @@
         <v-navigation-drawer
                 v-model="drawer"
                 app
+                dark
                 clipped
-                color="grey lighten-4"
         >
             <v-list
                     dense
-                    class="grey lighten-4"
+                    dark
             >
                 <template v-for="(item, i) in items">
                     <v-row
@@ -78,7 +88,6 @@
         <v-main>
             <v-container
                     fluid
-                    class="grey lighten-4 fill-height"
             >
                 <v-row
                         justify="center"
