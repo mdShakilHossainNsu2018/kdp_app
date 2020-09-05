@@ -1,9 +1,14 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import Index from "@/components/Index";
+import RoyaltyCalculator from "@/components/RoyaltyCalculator";
 
 Vue.use(VueRouter)
 
-const routes = []
+const routes = [
+  { path: '/', component: Index },
+  { path: '/royalty-calculator', component: RoyaltyCalculator }
+]
 
 // eslint-disable-next-line no-new
 const router = new VueRouter({

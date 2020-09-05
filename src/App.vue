@@ -59,6 +59,8 @@
                             v-else
                             :key="i"
                             link
+                            :to="item.link"
+
                     >
                         <v-list-item-action>
                             <v-icon>{{ item.icon }}</v-icon>
@@ -83,7 +85,7 @@
                         align="center"
                 >
                     <v-col >
-                        <Index/>
+                        <router-view></router-view>
 <!--                        <v-tooltip right>-->
 <!--                            <template>-->
 <!--&lt;!&ndash;                                <v-btn&ndash;&gt;-->
@@ -106,17 +108,17 @@
 </template>
 
 <script>
-    import Index from "@/components/Index";
+
     export default {
-        components: {Index},
+        components: {},
         props: {
             source: String,
         },
         data: () => ({
             drawer: null,
             items: [
-                { icon: 'mdi-home', text: 'Home' },
-                { icon: 'mdi-calculator', text: 'King Calculator' },
+                { icon: 'mdi-home', text: 'Home', link: '/'},
+                { icon: 'mdi-calculator', text: 'Royalty Calculator', link: '/royalty-calculator' },
                 { divider: true },
                 // { heading: 'Labels' },
                 // { icon: 'add', text: 'Create new label' },
