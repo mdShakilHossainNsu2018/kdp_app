@@ -38,10 +38,14 @@
 
         // Certain minor words should be left lowercase unless
         // they are the first or last words in the string
-        // a, an, the, at, by, for, in, of,on, to, up, and, as, but, or, nor, so
-        // yet
+        // a, an, the, at, by, for, in, of, on, to, up, and, as, but, or, nor, so
+        // yet, are, was, were, be, to, out, with, from, into, like, off, onto, upon
+        // if, than, that, till, when
         lowers = ['A', 'An', 'The', 'And', 'But', 'Or', 'For', 'Nor', 'As', 'At', 'So', 'Yet',
-            'By', 'For', 'From', 'In', 'Into', 'Near', 'Of', 'On', 'Onto', 'To', 'With', 'Up'];
+            'By', 'For', 'From', 'In', 'Into', 'Near', 'Of', 'On', 'Onto', 'To', 'With', 'Up',
+            'Are', 'Was', 'Were', 'Be', 'Out', 'Like', 'Off', 'Upon', 'If', 'Then', 'That', 'Till',
+            'When'
+        ];
         for (i = 0, j = lowers.length; i < j; i++)
             str = str.replace(new RegExp('\\s' + lowers[i] + '\\s', 'g'),
                 function (txt) {
