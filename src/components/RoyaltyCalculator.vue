@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <v-card class="text-center">
+        <v-card class="text-center px-9">
             <H1>Roility calculator</H1>
 <!--            <v-row align="center">-->
 
@@ -290,23 +290,23 @@
 
             minimumListPrice(){
 
-                if(parseFloat(this.printingCost /0.6).toFixed(2)> 0){
-                    return 'list price is too low'
-                }
+                // if(parseFloat(this.printingCost /0.6).toFixed(2)> 0){
+                //     return 0
+                // }
 
                 return parseFloat(this.printingCost /0.6).toFixed(2)
             },
 
             amazonRoyalty(){
-                if(parseFloat(this.printingCost /0.6).toFixed(2)> 0){
-                    return 'list price is too low'
-                }
+                // if(parseFloat(this.printingCost /0.6).toFixed(2)> 0){
+                //     return 'list price is too low'
+                // }
                 return parseFloat((this.list_price*0.6)-this.printingCost ).toFixed(2)
             },
             expendedDistributionRoyalty(){
-                if(parseFloat(this.printingCost /0.6).toFixed(2)> 0){
-                    return 'list price is too low'
-                }
+                // if(parseFloat(this.printingCost /0.6).toFixed(2)> 0){
+                //     return 'list price is too low'
+                // }
                 return parseFloat((this.list_price*0.4)-this.printingCost).toFixed(2)
             },
         }
