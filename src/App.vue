@@ -61,7 +61,7 @@
                             link
                     >
                         <v-list-item-action>
-                            <v-icon>mid-{{ item.icon }}</v-icon>
+                            <v-icon>{{ item.icon }}</v-icon>
                         </v-list-item-action>
                         <v-list-item-content>
                             <v-list-item-title class="grey--text">
@@ -115,20 +115,20 @@
         data: () => ({
             drawer: null,
             items: [
-                { icon: 'lightbulb_outline', text: 'Notes' },
-                { icon: 'touch_app', text: 'Reminders' },
+                { icon: 'mdi-home', text: 'Home' },
+                { icon: 'mdi-calculator', text: 'King Calculator' },
                 { divider: true },
-                { heading: 'Labels' },
-                { icon: 'add', text: 'Create new label' },
-                { divider: true },
-                { icon: 'archive', text: 'Archive' },
-                { icon: 'delete', text: 'Trash' },
-                { divider: true },
-                { icon: 'settings', text: 'Settings' },
-                { icon: 'chat_bubble', text: 'Trash' },
-                { icon: 'help', text: 'Help' },
-                { icon: 'phonelink', text: 'App downloads' },
-                { icon: 'keyboard', text: 'Keyboard shortcuts' },
+                // { heading: 'Labels' },
+                // { icon: 'add', text: 'Create new label' },
+                // { divider: true },
+                // { icon: 'archive', text: 'Archive' },
+                // { icon: 'delete', text: 'Trash' },
+                // { divider: true },
+                // { icon: 'settings', text: 'Settings' },
+                // { icon: 'chat_bubble', text: 'Trash' },
+                // { icon: 'help', text: 'Help' },
+                // { icon: 'phonelink', text: 'App downloads' },
+                // { icon: 'keyboard', text: 'Keyboard shortcuts' },
             ],
         }),
     }
