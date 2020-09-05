@@ -9,13 +9,14 @@
             <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
 
-            <span class="title ml-3 mr-5"><v-img
+            <v-btn to="/" fab tile icon class="title ml-3 mr-5"><v-img
+
                     class="mx-2"
                     src="../src/assets/final_logologoblack.png"
                     max-height="40"
                     max-width="40"
                     contain
-            ></v-img></span>
+            ></v-img></v-btn>
             <v-text-field
                     dark
                     solo-inverted

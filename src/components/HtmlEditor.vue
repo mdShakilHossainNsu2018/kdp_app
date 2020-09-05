@@ -10,7 +10,7 @@
                         <v-col>
                             <vue-editor v-model="content"></vue-editor>
                             <v-btn class="mt-2"
-                                    color="primary"
+
                                     dark
                                     v-bind="attrs"
                                     v-on="on"
