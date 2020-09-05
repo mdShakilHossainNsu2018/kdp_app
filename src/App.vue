@@ -121,7 +121,7 @@
                 { icon: 'mdi-calculator', text: 'Royalty Calculator', link: '/royalty-calculator' },
                 { divider: true },
                 // { heading: 'Labels' },
-                // { icon: 'add', text: 'Create new label' },
+                { icon: 'mdi-file-document', text: 'Tittle Generator', link: '/title-generator' },
                 // { divider: true },
                 // { icon: 'archive', text: 'Archive' },
                 // { icon: 'delete', text: 'Trash' },
