@@ -50,15 +50,7 @@
                                 {{ item.heading }}
                             </v-subheader>
                         </v-col>
-                        <v-col
-                                cols="6"
-                                class="text-right"
-                        >
-                            <v-btn
-                                    small
-                                    text
-                            >edit</v-btn>
-                        </v-col>
+
                     </v-row>
                     <v-divider
                             v-else-if="item.divider"
@@ -74,7 +66,15 @@
 
                     >
                         <v-list-item-action>
-                            <v-icon>{{ item.icon }}</v-icon>
+                            <v-img v-if="item.text==='Home'" src="../src/assets/icons/4.png" ></v-img>
+                            <v-img v-if="item.text==='Royalty Calculator'" src="../src/assets/icons/7.png" ></v-img>
+                            <v-img v-if="item.text==='Tittle Generator'" src="../src/assets/icons/2.png" ></v-img>
+                            <v-img v-if="item.text==='Pdf Combiner'" src="../src/assets/icons/5.png" ></v-img>
+                            <v-img v-if="item.text==='Category Lists'" src="../src/assets/icons/6.png" ></v-img>
+                            <v-img v-if="item.text==='Trademark Search'" src="../src/assets/icons/8.png" ></v-img>
+                            <v-img v-if="item.text==='Synonyms Creator'" src="../src/assets/icons/3.png" ></v-img>
+                            <v-img v-if="item.text==='Word Cloud'" src="../src/assets/icons/1.png" ></v-img>
+
                         </v-list-item-action>
                         <v-list-item-content>
                             <v-list-item-title class="grey--text">
@@ -124,24 +124,38 @@
         props: {
             source: String,
         },
+        methods: {
+
+        },
+
+        watch: {
+            '$route' (to) {
+                document.title = to.meta.title || 'Self Publishing Titans'
+            }
+        },
+
         data: () => ({
             drawer: null,
             items: [
-                { icon: 'mdi-home', text: 'Home', link: '/'},
-                { icon: 'mdi-calculator', text: 'Royalty Calculator', link: '/royalty-calculator' },
+                { icon: '4.png', text: 'Home', link: '/'},
+                { divider: true },
+                { icon: '7.png', text: 'Royalty Calculator', link: '/royalty-calculator' },
                 { divider: true },
                 // { heading: 'Labels' },
-                { icon: 'mdi-file-document', text: 'Tittle Generator', link: '/title-generator' },
-                // { divider: true },
-                // { icon: 'archive', text: 'Archive' },
-                // { icon: 'delete', text: 'Trash' },
-                // { divider: true },
-                // { icon: 'settings', text: 'Settings' },
-                // { icon: 'chat_bubble', text: 'Trash' },
-                // { icon: 'help', text: 'Help' },
-                // { icon: 'phonelink', text: 'App downloads' },
-                // { icon: 'keyboard', text: 'Keyboard shortcuts' },
-            ],
+                { icon: '2.png', text: 'Tittle Generator', link: '/title-generator' },
+                { divider: true },
+                { icon: '../src/assets/icons/5.png', text: 'Pdf Combiner', link: '/pdf-combiner' },
+                { divider: true },
+                { icon: '../src/assets/icons/6.png', text: 'Category Lists', link: '/category-lists' },
+                { divider: true },
+                { icon: '../src/assets/icons/8.png', text: 'Trademark Search', link: '/trademark-search' },
+                { divider: true },
+                { icon: '../src/assets/icons/3.png', text: 'Synonyms Creator', link: '/synonyms-creator' },
+                { divider: true },
+                { icon: '../src/assets/icons/1.png', text: 'Word Cloud', link: '/word-cloud' },
+                { divider: true },
+
+    ],
         }),
     }
 </script>

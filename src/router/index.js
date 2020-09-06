@@ -7,9 +7,15 @@ import TitleGenerator from "@/components/TitleGenerator";
 Vue.use(VueRouter)
 
 const routes = [
-  { path: '/', component: Index },
-  { path: '/royalty-calculator', component: RoyaltyCalculator },
-  { path: '/title-generator', component: TitleGenerator },
+  { path: '/', component: Index, name: 'Index', meta: {
+      title: 'Self Publishing Titans - Home'
+    } },
+  { path: '/royalty-calculator', component: RoyaltyCalculator, name:"RoyaltyCalculator", meta: {
+      title: 'Self Publishing Titans - Calculator'
+    } },
+  { path: '/title-generator', component: TitleGenerator, name: 'TitleGenerator', meta: {
+      title: 'Self Publishing Titans - Title Generator'
+    } },
 ]
 
 // eslint-disable-next-line no-new

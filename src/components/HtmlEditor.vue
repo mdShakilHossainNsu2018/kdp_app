@@ -44,6 +44,8 @@
     export default {
         name: "HtmlEditor",
 
+        title(){ return 'Self Publishing Titans'},
+
         components: {
             VueEditor
         },
