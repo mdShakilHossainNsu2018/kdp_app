@@ -21,7 +21,7 @@
                 </v-col>
             </v-row>
             <h1 v-if="title.length>0">Generated Title Output:</h1>
-            {{title}}
+            <pre>{{title}}</pre>
         </v-card>
 
     </v-container>
