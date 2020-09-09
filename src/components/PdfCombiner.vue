@@ -5,7 +5,7 @@
             <v-file-input v-model="file" dark type="file" clearable label="File input"></v-file-input>
             <p v-for="(file, index) in file" :key="index">{{file[index].name}}</p>
 
-            <v-btn @click="click" :disabled="uploadingState">Upload <div v-if="uploadingState">Uploading...</div> <v-progress-circular
+            <v-btn @click="click" :disabled="uploadingState"><div v-if="!uploadingState">Upload</div> <div v-if="uploadingState">Uploading...</div> <v-progress-circular
                     indeterminate
                     v-if="uploadingState"
                     color="primary"
