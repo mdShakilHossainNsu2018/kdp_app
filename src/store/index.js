@@ -24,7 +24,7 @@ const store = new Vuex.Store({
     },
     actions: {
         pdfPost: (context, data) => {
-            return axios.post('https://salty-beyond-56733.herokuapp.com/api/pdf/pdf/', data, {
+            return axios.post('http://127.0.0.1:8000/api/pdf/pdf/', data, {
                 headers: {
                     'content-type': 'multipart/form-data',
                 }
@@ -40,10 +40,8 @@ const store = new Vuex.Store({
 
         },
 
-        pdfDelete(context, data) {
-            axios.delete('https://salty-beyond-56733.herokuapp.com/api/pdf/pdf/' + data+'/').then(res => console.log(res)).catch(err => {
-                console.log(err)
-            })
+        pdfDelete: (context, data) => {
+           return axios.delete('https://salty-beyond-56733.herokuapp.com/api/pdf/pdf/' + data+'/')
         }
 
 
