@@ -34,9 +34,9 @@
                             <div style="font-size: 5px; display: none;">{{item.pdf_file}}</div>
 
                         </v-card-title>
-                        <vue-friendly-iframe scrolling="no" :src="item.pdf_file"></vue-friendly-iframe>
-<!--                        <iframe  scrolling="no" allowfullscreen :src="item.pdf_file" height="200" width="250" >-->
-<!--                        </iframe>-->
+<!--                        <vue-friendly-iframe scrolling="no" :src="item.pdf_file"></vue-friendly-iframe>-->
+                        <iframe  scrolling="no" allowfullscreen :src="item.pdf_file" height="200" width="250" >
+                        </iframe>
                     </v-card>
                 </div>
                     </transition-group>
