@@ -11,7 +11,7 @@
                     color="primary"
             ></v-progress-circular>
             </v-btn>
-            <v-btn @click="margePdf" :disabled="margeLoadingState" class="ml-7">Merge <div v-if="margeLoadingState">Merging...</div> <v-progress-circular
+            <v-btn @click="margePdf" :disabled="margeLoadingState" class="ml-7"><div v-if="!margeLoadingState">Merge</div> <div v-if="margeLoadingState">Merging...</div> <v-progress-circular
                     indeterminate
                     v-if="margeLoadingState"
                     color="primary"
@@ -154,6 +154,7 @@
                 this.margeLoadingState = true
                 mergePDFDocuments(this.pdfs).finally(()=>{
                     this.margeLoadingState = false
+                    this.pdfs = []
                 })
             },
 
