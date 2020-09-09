@@ -46,7 +46,6 @@
 
         </v-card>
 
-<!--        <SnackbarComponent :snackbar="snackbar.show" :text="snackbar.message" :color="snackbar.color"/>-->
         <v-snackbar
                 v-model="snackbar.show"
         >
@@ -72,14 +71,11 @@
     import { PDFDocument } from 'pdf-lib'
     const download = require('downloadjs');
     import draggable from 'vuedraggable'
-    // import SnackbarComponent from "@/components/SnackbarComponent";
-    // import VueFriendlyIframe from 'vue-friendly-iframe';
 
 
     async function mergePDFDocuments(documents) {
         const mergedPdf = await PDFDocument.create();
 
-        // console.log(documents)
 
         for (let pdf of documents) {
            const secondDonorPdfBytes = await fetch(pdf.pdf_file).then(res => res.arrayBuffer())
@@ -90,7 +86,7 @@
             copiedPages.forEach((page) => mergedPdf.addPage(page));
 
 
-            await axios.delete('http://127.0.0.1:8000/api/pdf/pdf/' + pdf.id+ '/')
+            await axios.delete('https://salty-beyond-56733.herokuapp.com/api/pdf/pdf/' + pdf.id+ '/')
         }
 
         const pdfBytes = await mergedPdf.save();
@@ -193,17 +189,9 @@
             }
         },
 
-        // computed: {
-        //     getFile:(data)=>{
-        //         return data
-        //     },
-        // }
     }
 </script>
 
 <style scoped>
-    .iframe-placeholder
-    {
-        background: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100% 100%"><text fill="%23FF0000" x="50%" y="50%" font-family="\'Lucida Grande\', sans-serif" font-size="24" text-anchor="middle">PLACEHOLDER</text></svg>') 0px 0px no-repeat;
-    }
+
 </style>
