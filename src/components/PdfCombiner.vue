@@ -23,7 +23,9 @@
                 <div  v-for="(item, index) in pdfs" :key="index" class="d-flex align-content-space-around flex-wrap">
                     <v-card class="ma-3" style="cursor: grab" >
                         <v-card-actions class="justify-end">
-                            <v-btn icon @click="closePdf(item.id, index)"> <v-icon>mdi-close</v-icon></v-btn>
+                            <v-icon>mdi-arrow-left-bold-circle</v-icon>
+                            <v-icon class="mr-9">mdi-arrow-right-bold-circle</v-icon>
+                            <v-btn class="ml-7" icon @click="closePdf(item.id, index)"> <v-icon>mdi-close</v-icon></v-btn>
                         </v-card-actions>
                         <v-card-title>
                             {{item.pdf_file_name}}
