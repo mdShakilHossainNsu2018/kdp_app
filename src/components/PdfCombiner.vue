@@ -88,7 +88,7 @@
             copiedPages.forEach((page) => mergedPdf.addPage(page));
 
 
-            await axios.delete('https://salty-beyond-56733.herokuapp.com/api/pdf/pdf/' + pdf.id+ '/')
+            await axios.delete(`${this.$store.state.baseApiUrl}api/pdf/pdf/` + pdf.id+ '/')
         }
 
         const pdfBytes = await mergedPdf.save();

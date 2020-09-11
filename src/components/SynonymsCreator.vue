@@ -196,7 +196,7 @@
                     return;
                 }
 
-                axios.get(`https://salty-beyond-56733.herokuapp.com/api/dictionary/?q=${this.message}`).then(response => {
+                axios.get(`${this.$store.state.baseApiUrl}api/dictionary/?q=${this.message}`).then(response => {
                     this.respondedData = response.data.data
                     console.log(response.data.data)
                 }).catch(error => console.log(error)).finally(() => {

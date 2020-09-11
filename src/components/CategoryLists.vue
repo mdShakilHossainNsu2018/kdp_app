@@ -229,7 +229,7 @@
                 this.isLoading = true
 
                 // Lazily load input items
-                fetch('https://salty-beyond-56733.herokuapp.com/api/category/category/')
+                fetch(`${this.$store.state.baseApiUrl}api/category/category/`)
                     .then(res => res.clone().json())
                     .then(res => {
                         this.searchItems = res
@@ -246,7 +246,7 @@
             fetch() {
                 if (this.categories.length) return
 
-                return fetch('https://salty-beyond-56733.herokuapp.com/api/category/category/')
+                return fetch(`${this.$store.state.baseApiUrl}api/category/category/`)
                     .then(res => res.json())
                     .then(data => {
                         this.categories = data;

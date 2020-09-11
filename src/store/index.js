@@ -11,7 +11,8 @@ const store = new Vuex.Store({
     modules: {},
 
     state: {
-        pdf_file_name: ''
+        pdf_file_name: '',
+        baseApiUrl: 'https://still-inlet-23955.herokuapp.com/'
     },
     mutations: {
         setPdfFileName(state, data) {
@@ -24,7 +25,7 @@ const store = new Vuex.Store({
     },
     actions: {
         pdfPost: (context, data) => {
-            return axios.post('https://salty-beyond-56733.herokuapp.com/api/pdf/pdf/', data, {
+            return axios.post(`${context.state.baseApiUrl}api/pdf/pdf/`, data, {
                 headers: {
                     'content-type': 'multipart/form-data',
                 }
@@ -41,7 +42,7 @@ const store = new Vuex.Store({
         },
 
         pdfDelete: (context, data) => {
-           return axios.delete('https://salty-beyond-56733.herokuapp.com/api/pdf/pdf/' + data+'/')
+           return axios.delete(`${context.state.baseApiUrl}api/pdf/pdf/` + data+'/')
         }
 
 
