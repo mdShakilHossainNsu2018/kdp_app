@@ -3,21 +3,23 @@
 
 
 
-        <v-row justify="left">
+        <v-row>
             <v-dialog v-model="dialog" width="600px">
                 <template v-slot:activator="{ on, attrs }">
                     <v-row>
                         <v-col>
-                            <vue-editor v-model="content"></vue-editor>
-                            <v-btn class="mt-2"
+                            <vue-editor  v-model="content" :editorToolbar="customToolbar"></vue-editor>
 
-                                    dark
-                                    v-bind="attrs"
-                                    v-on="on"
+                                <v-btn class="mt-2 mx-auto"
 
-                            >
-                                Generate Html
-                            </v-btn>
+                                       dark
+                                       v-bind="attrs"
+                                       v-on="on"
+
+                                >
+                                    Generate Html
+                                </v-btn>
+
                         </v-col>
                     </v-row>
 
@@ -60,6 +62,30 @@
             return {
                 content: "",
                 dialog: false,
+                customToolbar: [
+                    // [{ 'font': [] }],
+                    [{ 'header': [false, 1, 2, 3, 4, 5, 6, ] }],
+                    // [{ 'size': ['small', false, 'large', 'huge'] }],
+                    // [{ 'header': 1 }, { 'header': 2 }],
+                    ["bold", "italic", "underline"],
+                    [{ list: "ordered" }, { list: "bullet" }],
+                    // ['blockquote', 'code-block'],
+                    // [{ 'list': 'ordered'}, { 'list': 'bullet' }, { 'list': 'check' }],
+                    // [{ 'script': 'sub'}, { 'script': 'super' }],
+                    // [{ 'indent': '-1'}, { 'indent': '+1' }],
+                    // [{ 'color': [] }, { 'background': [] }],
+                    // ['link', 'image', 'video', 'formula'],
+                    [{ 'direction': 'rtl' }],
+                    ['clean'],
+                    // [
+                    //     { align: "" },
+                    //     { align: "center" },
+                    //     { align: "right" },
+                    //     { align: "justify" }
+                    // ],
+                    // [{ color: [] }]
+                ]
+                // customToolbar: [["bold", "italic", "underline"], [{ list: "ordered" }, { list: "bullet" }, {list:'code'}]]
             };
         }
 
