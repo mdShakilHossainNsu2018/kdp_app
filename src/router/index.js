@@ -5,7 +5,7 @@ import RoyaltyCalculator from "@/components/RoyaltyCalculator";
 import TitleGenerator from "@/components/TitleGenerator";
 import PdfCombiner from "@/components/PdfCombiner";
 import SynonymsCreator from "@/components/SynonymsCreator";
-import TrademarkSearch from "@/components/TrademarkSearch";
+import TrademarkSearch from "@/components/QrCodeGenerator";
 import WordCloud from "@/components/WordCloud";
 import CategoryLists from "@/components/CategoryLists";
 

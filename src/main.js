@@ -7,6 +7,9 @@ import router from './router'
 
 import VueClipboard from 'vue-clipboard2'
 import VueFriendlyIframe from 'vue-friendly-iframe';
+import VueQrcode from '@chenfengyuan/vue-qrcode';
+
+Vue.component(VueQrcode.name, VueQrcode);
 
 Vue.use(VueFriendlyIframe);
 

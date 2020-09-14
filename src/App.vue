@@ -127,7 +127,7 @@
                 { icon: '2.png', text: 'Tittle Generator', link: '/title-generator' },
                 { icon: '../src/assets/icons/5.png', text: 'Pdf Combiner', link: '/pdf-combiner' },
                 { icon: '../src/assets/icons/6.png', text: 'Category Lists', link: '/category-lists' },
-                { icon: '../src/assets/icons/8.png', text: 'Trademark Search', link: '/trademark-search' },
+                { icon: '../src/assets/icons/8.png', text: 'QR Code Generator', link: '/trademark-search' },
                 { icon: '../src/assets/icons/3.png', text: 'Synonyms Creator', link: '/synonyms-creator' },
                 { icon: '../src/assets/icons/1.png', text: 'Word Cloud', link: '/word-cloud' },
 
