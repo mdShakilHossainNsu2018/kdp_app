@@ -5,7 +5,7 @@ import RoyaltyCalculator from "@/components/RoyaltyCalculator";
 import TitleGenerator from "@/components/TitleGenerator";
 import PdfCombiner from "@/components/PdfCombiner";
 import SynonymsCreator from "@/components/SynonymsCreator";
-import TrademarkSearch from "@/components/QrCodeGenerator";
+import QrCodeGenerator from "@/components/QrCodeGenerator";
 import WordCloud from "@/components/WordCloud";
 import CategoryLists from "@/components/CategoryLists";
 
@@ -27,8 +27,8 @@ const routes = [
     { path: '/synonyms-creator', component: SynonymsCreator, name: 'SynonymsCreator', meta: {
       title: 'Self Publishing Titans - Synonyms Creator'
     } },
-    { path: '/trademark-search', component: TrademarkSearch, name: 'TrademarkSearch', meta: {
-      title: 'Self Publishing Titans - Trademark Search'
+    { path: '/qr-generator', component: QrCodeGenerator, name: 'TrademarkSearch', meta: {
+      title: 'Self Publishing Titans - QR generator'
     } },
     { path: '/word-cloud', component: WordCloud, name: 'WordCloud', meta: {
       title: 'Self Publishing Titans - Word Cloud'

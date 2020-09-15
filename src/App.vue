@@ -59,7 +59,7 @@
                             <v-img v-if="item.text==='Tittle Generator'" src="../src/assets/icons/2.png" ></v-img>
                             <v-img v-if="item.text==='Pdf Combiner'" src="../src/assets/icons/5.png" ></v-img>
                             <v-img v-if="item.text==='Category Lists'" src="../src/assets/icons/6.png" ></v-img>
-                            <v-img v-if="item.text==='Trademark Search'" src="../src/assets/icons/8.png" ></v-img>
+                            <v-img v-if="item.text==='QR Code Generator'" src="../src/assets/icons/qr.png" ></v-img>
                             <v-img v-if="item.text==='Synonyms Creator'" src="../src/assets/icons/3.png" ></v-img>
                             <v-img v-if="item.text==='Word Cloud'" src="../src/assets/icons/1.png" ></v-img>
 
@@ -127,7 +127,7 @@
                 { icon: '2.png', text: 'Tittle Generator', link: '/title-generator' },
                 { icon: '../src/assets/icons/5.png', text: 'Pdf Combiner', link: '/pdf-combiner' },
                 { icon: '../src/assets/icons/6.png', text: 'Category Lists', link: '/category-lists' },
-                { icon: '../src/assets/icons/8.png', text: 'QR Code Generator', link: '/trademark-search' },
+                { icon: '../src/assets/icons/qr.png', text: 'QR Code Generator', link: '/qr-generator' },
                 { icon: '../src/assets/icons/3.png', text: 'Synonyms Creator', link: '/synonyms-creator' },
                 { icon: '../src/assets/icons/1.png', text: 'Word Cloud', link: '/word-cloud' },
 

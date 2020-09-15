@@ -70,7 +70,6 @@
         methods: {
             click(){
                 var childSpanClassAttr = this.$refs['qrcode'].$el.src;
-                console.log(childSpanClassAttr)
                 download(childSpanClassAttr)
             }
         }
