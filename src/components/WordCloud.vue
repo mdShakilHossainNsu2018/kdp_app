@@ -90,7 +90,7 @@
                 newWord: [],
                 snackbar: false,
                 sortBy: 'count',
-                sortDesc: false,
+                sortDesc: true,
                 snackWord: '',
                 headers: [
                     {
