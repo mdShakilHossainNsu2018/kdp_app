@@ -28,6 +28,8 @@
                         v-if="newWord.length !== 0"
                         :headers="headers"
                         :items="wordsObj"
+                        :sort-by.sync="sortBy"
+                        :sort-desc.sync="sortDesc"
                         :items-per-page="7"
                         class="elevation-1"
                 ></v-data-table>
@@ -87,6 +89,8 @@
                 text: "",
                 newWord: [],
                 snackbar: false,
+                sortBy: 'count',
+                sortDesc: false,
                 snackWord: '',
                 headers: [
                     {
