@@ -2,7 +2,7 @@
     <v-container>
         <v-card class="text-center px-9 py-9">
             <h1>Pdf Combiner</h1>
-            <v-file-input v-model="file" dark type="file" clearable label="File input"></v-file-input>
+            <v-file-input v-model="file" type="file" clearable label="File input"></v-file-input>
             <p v-for="(file, index) in file" :key="index">{{file[index].name}}</p>
 
             <v-btn @click="click" :disabled="uploadingState"><div v-if="!uploadingState">Upload</div> <div v-if="uploadingState">Uploading...</div> <v-progress-circular

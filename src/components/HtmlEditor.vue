@@ -9,16 +9,17 @@
                     <v-row>
                         <v-col>
                             <vue-editor  v-model="content" :editorToolbar="customToolbar"></vue-editor>
+                                <div class="d-flex justify-end">
+                                    <v-btn class="mt-2"
+                                           dark
+                                           v-bind="attrs"
+                                           v-on="on"
 
-                                <v-btn class="mt-2 mx-auto"
+                                    >
+                                        Generate Html
+                                    </v-btn>
+                                </div>
 
-                                       dark
-                                       v-bind="attrs"
-                                       v-on="on"
-
-                                >
-                                    Generate Html
-                                </v-btn>
 
                         </v-col>
                     </v-row>

@@ -1,7 +1,8 @@
 <template>
     <v-container>
         <v-card class="text-center px-9">
-            <H1>Roility calculator</H1>
+            <v-img src="../assets/kdccallogo.png" max-width="150" class="pt-4"></v-img>
+            <H1>Royalty calculator</H1>
 <!--            <v-row align="center">-->
 
 <!--                <v-col cols="12" sm="6">-->
@@ -15,6 +16,7 @@
                             label="Enter number of pages:"
                             type="number"
                             required
+                            :rules="pageRule"
                     ></v-text-field>
 
                     <v-select
@@ -30,6 +32,7 @@
                             label="Enter anticipated list price:"
                             type="number"
                             required
+                            :rules="[v=> v> minimumListPrice || 'Minimum List Price: ' + minimumListPrice]"
                     ></v-text-field>
 <!--                </v-col>-->
 <!--            </v-row>-->
@@ -60,6 +63,10 @@
                 interior_type_value: '',
                 choose_channel_value: '',
                 num_pages: 0,
+                pageRule: [
+                    v => !!v || 'Page number is required',
+                    v => v >= 24 || 'Page number must be greater than 24',
+                ],
                 list_price: 0,
                 choose_channel: ['amazon.com', 'amazon.ca',
                     'amazon.co.uk',

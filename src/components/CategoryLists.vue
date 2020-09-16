@@ -1,139 +1,5 @@
 <template>
     <v-container>
-        <!--        <v-card>-->
-        <!--            <v-toolbar-->
-        <!--                    color="primary"-->
-        <!--                    dark-->
-        <!--                    flat-->
-        <!--            >-->
-        <!--                <v-icon>mdi-equal-box</v-icon>-->
-        <!--                <v-toolbar-title> All KDP Categories</v-toolbar-title>-->
-        <!--                <v-spacer></v-spacer>-->
-
-        <!--                <v-autocomplete-->
-        <!--                        class="ml-11"-->
-        <!--                        v-model="model"-->
-        <!--                        :items="searchItems"-->
-        <!--                        :loading="isLoading"-->
-        <!--                        :search-input.sync="search"-->
-        <!--                        clearable-->
-        <!--                        hide-details-->
-        <!--                        hide-selected-->
-        <!--                        item-text="category_name"-->
-        <!--                        item-value="url"-->
-        <!--                        label="Search for a categories..."-->
-
-        <!--                >-->
-        <!--                    <template v-slot:no-data>-->
-        <!--                        <v-list-item>-->
-        <!--                            <v-list-item-title>-->
-        <!--                                Search for your favorite-->
-        <!--                                <strong>Categories</strong>-->
-        <!--                            </v-list-item-title>-->
-        <!--                        </v-list-item>-->
-        <!--                    </template>-->
-        <!--                    &lt;!&ndash;                    <template v-slot:selection="{ attr, on, item, selected }">&ndash;&gt;-->
-        <!--                    &lt;!&ndash;                        <v-chip&ndash;&gt;-->
-        <!--                    &lt;!&ndash;                                v-bind="attr"&ndash;&gt;-->
-        <!--                    &lt;!&ndash;                                :input-value="selected"&ndash;&gt;-->
-        <!--                    &lt;!&ndash;                                color="blue-grey"&ndash;&gt;-->
-        <!--                    &lt;!&ndash;                                class="white&#45;&#45;text"&ndash;&gt;-->
-        <!--                    &lt;!&ndash;                                v-on="on"&ndash;&gt;-->
-        <!--                    &lt;!&ndash;                        >&ndash;&gt;-->
-        <!--                    &lt;!&ndash;                            <v-icon left>mdi-coin</v-icon>&ndash;&gt;-->
-        <!--                    &lt;!&ndash;                            <span v-text="item.category_name"></span>&ndash;&gt;-->
-        <!--                    &lt;!&ndash;                        </v-chip>&ndash;&gt;-->
-        <!--                    &lt;!&ndash;                    </template>&ndash;&gt;-->
-        <!--                    <template v-slot:item="{ item }">-->
-        <!--                        <v-list-item-avatar-->
-        <!--                                color="indigo"-->
-        <!--                                class="headline font-weight-light white&#45;&#45;text"-->
-        <!--                        >-->
-        <!--                            {{ item.category_name.charAt(0) }}-->
-        <!--                        </v-list-item-avatar>-->
-        <!--                        <v-list-item-content>-->
-        <!--                            <v-list-item-title v-text="item.category_name"></v-list-item-title>-->
-        <!--                            &lt;!&ndash;                            <v-list-item-subtitle v-text="item.symbol"></v-list-item-subtitle>&ndash;&gt;-->
-        <!--                        </v-list-item-content>-->
-        <!--                        <v-list-item-action>-->
-        <!--                            <v-icon>mdi-coin</v-icon>-->
-        <!--                        </v-list-item-action>-->
-        <!--                    </template>-->
-        <!--                </v-autocomplete>-->
-        <!--            </v-toolbar>-->
-
-        <!--            <v-row>-->
-        <!--                <v-col>-->
-        <!--                    <v-card-text>-->
-
-        <!--                        <v-treeview-->
-        <!--                                v-model="tree"-->
-        <!--                                :load-children="fetch"-->
-        <!--                                :items="items"-->
-        <!--                                selected-color="indigo"-->
-        <!--                                return-object-->
-        <!--                                item-key="id"-->
-        <!--                                hoverable-->
-        <!--                                activatable-->
-        <!--                                @update:active="updateForm"-->
-        <!--                                expand-icon="mdi-chevron-down"-->
-        <!--                                on-icon="mdi-bookmark"-->
-        <!--                                off-icon="mdi-bookmark-outline"-->
-        <!--                                indeterminate-icon="mdi-bookmark-minus"-->
-
-        <!--                        >-->
-        <!--                        </v-treeview>-->
-
-
-        <!--                        <template slot-scope="{ item }">-->
-        <!--                            <v-tooltip bottom>-->
-        <!--                                <template v-slot:activator="{ on, attrs }">-->
-        <!--                                    <a v-on="on" style="cursor: pointer" v-bind="attrs" @click="updateForm(item)">{{-->
-        <!--                                        item.icon }}</a>-->
-        <!--                                </template>-->
-        <!--                                <span>Tooltip</span>-->
-        <!--                            </v-tooltip>-->
-        <!--                        </template>-->
-        <!--                    </v-card-text>-->
-        <!--                </v-col>-->
-
-        <!--                <v-divider vertical></v-divider>-->
-
-        <!--                <v-col-->
-        <!--                        cols="12"-->
-        <!--                        md="6"-->
-        <!--                >-->
-        <!--                    <v-card-text>-->
-        <!--                        <div-->
-        <!--                                v-if="tree.length === 0"-->
-        <!--                                key="title"-->
-        <!--                                class="title font-weight-light grey&#45;&#45;text pa-4 text-center"-->
-        <!--                        >-->
-        <!--                            Click on category to check out...-->
-        <!--                        </div>-->
-
-        <!--                        <v-scroll-x-transition-->
-        <!--                                group-->
-        <!--                                hide-on-leave-->
-        <!--                        >-->
-        <!--                            <v-chip-->
-        <!--                                    v-for="(selection, i) in tree"-->
-        <!--                                    :key="i"-->
-        <!--                                    color="grey"-->
-        <!--                                    dark-->
-        <!--                                    small-->
-        <!--                                    class="ma-1"-->
-        <!--                            >-->
-        <!--                                <v-icon left small>mdi-beer</v-icon>-->
-        <!--                                {{ selection.category_name }}-->
-
-        <!--                                <v-btn v-if="selection.url !== null" :href="selection.url"> Check Out</v-btn>-->
-
-        <!--                            </v-chip>-->
-        <!--                        </v-scroll-x-transition>-->
-        <!--                    </v-card-text>-->
-        <!--                </v-col>-->
-        <!--            </v-row>-->
         <div class="d-flex justify-space-around flex-wrap">
             <v-card max-width="400" class="mb-11">
                 <v-card-title>
@@ -521,6 +387,23 @@
         </div>
 
 
+        <v-snackbar
+                v-model="snackbar.show"
+        >
+            {{ snackbar.message }}
+
+            <template v-slot:action="{ attrs }">
+                <v-btn
+                        :color="snackbar.color"
+                        text
+                        v-bind="attrs"
+                        @click="snackbar.show = false"
+                >
+                    Close
+                </v-btn>
+            </template>
+        </v-snackbar>
+
     </v-container>
 </template>
 
@@ -530,12 +413,18 @@
 
         data() {
             return {
+
                 search: '',
                 search1: '',
                 search2: '',
                 search3: '',
                 search4: '',
                 search5: '',
+                snackbar: {
+                    show: false,
+                    message: null,
+                    color: null
+                },
                 loading: false,
                 category_header: [
                     {
@@ -641,6 +530,13 @@
                 .then(data => {
                     this.categories = data;
                     console.log(data)
+                }).catch(err=>{
+                    console.log(err);
+                    this.snackbar = {
+                        message: 'Error occur.' + err.response.data.detail + 'Status code: ' + err.response.status,
+                        color: 'error',
+                        show: true
+                    }
                 }).finally(() => this.loading = false)
 
 

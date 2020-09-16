@@ -15,7 +15,7 @@
             <v-row align="right" justify="end">
                 <v-switch v-model="capitalized" class="ma-2" label="Capitalize Only"></v-switch>
 
-                    <v-btn v-clipboard:copy="title" >copy</v-btn>
+                    <v-btn  v-clipboard:copy="title" >copy</v-btn>
 
             </v-row>
                 </v-col>
