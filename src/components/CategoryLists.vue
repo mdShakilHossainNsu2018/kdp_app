@@ -453,9 +453,19 @@
 
         methods: {
             showSubCategory(item) {
-                this.subcategories1.push(...item.subcategories)
+                this.subcategories1 = []
+
+                var subCat = []
+
+                this.categories.forEach(all => {
+                    item.subcategories.forEach(sub=>{
+                        if(all.id === sub){
+                            subCat.push(all)
+                        }
+                    })
+                })
+                this.subcategories1.push(...subCat)
                 this.subcategories1['parentCategory'] = item.category_name
-                console.log(this.subcategories1)
             },
 
             getCategoryName(item){
@@ -469,9 +479,19 @@
 
             showSubCategory2(item) {
 
-                this.subcategories2.push(...item.subcategories)
+                this.subcategories2 = []
+
+                var subCat = []
+
+                this.categories.forEach(all => {
+                    item.subcategories.forEach(sub=>{
+                        if(all.id === sub){
+                            subCat.push(all)
+                        }
+                    })
+                })
+                this.subcategories2.push(...subCat)
                 this.subcategories2['parentCategory'] = item.category_name
-                console.log(this.subcategories2)
             },
 
             closeSubCat2() {
@@ -479,9 +499,19 @@
             },
             showSubCategory3(item) {
 
-                this.subcategories3.push(...item.subcategories)
+                this.subcategories3 = []
+
+                var subCat = []
+
+                this.categories.forEach(all => {
+                    item.subcategories.forEach(sub=>{
+                        if(all.id === sub){
+                            subCat.push(all)
+                        }
+                    })
+                })
+                this.subcategories3.push(...subCat)
                 this.subcategories3['parentCategory'] = item.category_name
-                console.log(this.subcategories3)
             },
 
             closeSubCat3() {
@@ -489,9 +519,19 @@
             },
             showSubCategory4(item) {
 
-                this.subcategories4.push(...item.subcategories)
+                this.subcategories4 = []
+
+                var subCat = []
+
+                this.categories.forEach(all => {
+                    item.subcategories.forEach(sub=>{
+                        if(all.id === sub){
+                            subCat.push(all)
+                        }
+                    })
+                })
+                this.subcategories4.push(...subCat)
                 this.subcategories4['parentCategory'] = item.category_name
-                console.log(this.subcategories4)
             },
 
             closeSubCat4() {
@@ -499,9 +539,19 @@
             },
             showSubCategory5(item) {
 
-                this.subcategories5.push(...item.subcategories)
+                this.subcategories5 = []
+
+                var subCat = []
+
+                this.categories.forEach(all => {
+                    item.subcategories.forEach(sub=>{
+                        if(all.id === sub){
+                            subCat.push(all)
+                        }
+                    })
+                })
+                this.subcategories5.push(...subCat)
                 this.subcategories5['parentCategory'] = item.category_name
-                console.log(this.subcategories5)
             },
 
             showSubCategory6(item) {
@@ -541,327 +591,10 @@
 
 
         }
-        // data: () => ({
-        //     categories: [],
-        //     isLoading: false,
-        //     tree: [],
-        //     newCategories: [],
-        //     search: null,
-        //     searchItems: [],
-        //     model: null,
-        // }),
-        //
-        // computed: {
-        //     items() {
-        //         const children = this.newCategories.map(category => ({
-        //             id: category.id,
-        //             name: this.getName(category.category_name),
-        //             url: category.url,
-        //             children: this.getChildren(category),
-        //         }))
-        //
-        //         return [{
-        //             id: 0,
-        //             name: 'All Categories',
-        //             children,
-        //         }]
-        //     },
-        //     shouldShowTree() {
-        //         return this.categories.length > 0 && !this.isLoading
-        //     },
-        // },
-        //
-        // watch: {
-        //
-        //     model(newSelectedArray, oldSelectedArray) {
-        //         console.log(newSelectedArray);
-        //         console.log(oldSelectedArray);
-        //
-        //         if (newSelectedArray === null || newSelectedArray === undefined) {
-        //
-        //             alert('For ' + newSelectedArray + ' Category Link Is Not Available. Please try next item')
-        //         } else {
-        //             window.location.href = newSelectedArray;
-        //         }
-        //
-        //     },
-        //
-        //     categories(val) {
-        //
-        //         this.newCategories = val.reduce((acc, cur) => {
-        //
-        //             if (cur.parent_category_id === null) {
-        //                 acc.push(cur)
-        //             }
-        //
-        //             return acc
-        //         }, []).sort()
-        //     },
-        //
-        //     search(val) {
-        //         console.log(val)
-        //         // Items have already been loaded
-        //         if (this.searchItems.length > 0) return
-        //
-        //         this.isLoading = true
-        //
-        //         // Lazily load input items
-        //         fetch(`${this.$store.state.baseApiUrl}api/category/category/`)
-        //             .then(res => res.clone().json())
-        //             .then(res => {
-        //                 this.searchItems = res
-        //             })
-        //             .catch(err => {
-        //                 console.log(err)
-        //             })
-        //             .finally(() => (this.isLoading = false))
-        //         console.log(this.searchItems)
-        //     },
-        // },
-        //
-        // methods: {
-        //     fetch() {
-        //         if (this.categories.length) return
-        //
-        //         return fetch(`${this.$store.state.baseApiUrl}api/category/category/`)
-        //             .then(res => res.json())
-        //             .then(data => {
-        //                 this.categories = data;
-        //             })
-        //     },
-        //
-        //     updateForm(item) {
-        //         if (item.length > 0)
-        //             console.log(item[0].url)
-        //         if (item[0].url === null || item[0].url === undefined) {
-        //             console.log(item[0].url)
-        //             alert('For ' + item[0].name + ' Category Link Is Not Available. Please try next item')
-        //         } else {
-        //             window.location.href = item[0].url;
-        //         }
-        //     },
-        //
-        //     save() {
-        //         console.log(this.items)
-        //     },
-        //
-        //     getName(name) {
-        //         return `${name.charAt(0).toUpperCase()}${name.slice(1)}`
-        //     },
-        //
-        //     getChildren(category) {
-        //         const categories = []
-        //
-        //         for (const cat of this.categories) {
-        //             if (cat.parent_category_id === category.id) {
-        //
-        //                 categories.push({
-        //                     ...cat,
-        //                     id: cat.id,
-        //                     url: cat.url,
-        //                     name: this.getName(cat.category_name),
-        //                 })
-        //
-        //                 const subcategory = []
-        //
-        //                 categories.forEach(item => {
-        //                     for (const sub of this.categories) {
-        //                         if (item.id === sub.parent_category_id) {
-        //
-        //                             subcategory.push({id: sub.id, name: this.getName(sub.category_name), ...sub})
-        //                             item['children'] = subcategory;
-        //                             // item.push({...sub,  name: this.getName(sub.category_name),})
-        //                         }
-        //                     }
-        //                 })
-        //
-        //
-        //                 const subcategory2 = []
-        //                 subcategory.forEach(item => {
-        //                     for (const sub of this.categories) {
-        //                         if (item.id === sub.parent_category_id) {
-        //
-        //                             subcategory2.push({id: sub.id, name: this.getName(sub.category_name), ...sub})
-        //                             item['children'] = subcategory2;
-        //                             // item.push({...sub,  name: this.getName(sub.category_name),})
-        //                         }
-        //                     }
-        //                 })
-        //
-        //                 const subcategory3 = []
-        //                 subcategory2.forEach(item => {
-        //                     for (const sub of this.categories) {
-        //                         if (item.id === sub.parent_category_id) {
-        //
-        //                             subcategory3.push({id: sub.id, name: this.getName(sub.category_name), ...sub})
-        //                             item['children'] = subcategory3;
-        //                             // item.push({...sub,  name: this.getName(sub.category_name),})
-        //                         }
-        //                     }
-        //                 })
-        //
-        //
-        //                 const subcategory4 = []
-        //                 subcategory3.forEach(item => {
-        //                     for (const sub of this.categories) {
-        //                         if (item.id === sub.parent_category_id) {
-        //
-        //                             subcategory4.push({id: sub.id, name: this.getName(sub.category_name), ...sub})
-        //                             item['children'] = subcategory4;
-        //                         }
-        //                     }
-        //                 })
-        //
-        //                 const subcategory5 = []
-        //                 subcategory4.forEach(item => {
-        //                     for (const sub of this.categories) {
-        //                         if (item.id === sub.parent_category_id) {
-        //
-        //                             subcategory5.push({id: sub.id, name: this.getName(sub.category_name), ...sub})
-        //                             item['children'] = subcategory5;
-        //                         }
-        //                     }
-        //                 })
-        //
-        //                 const subcategory6 = []
-        //                 subcategory5.forEach(item => {
-        //                     for (const sub of this.categories) {
-        //                         if (item.id === sub.parent_category_id) {
-        //
-        //                             subcategory6.push({id: sub.id, name: this.getName(sub.category_name), ...sub})
-        //                             item['children'] = subcategory6;
-        //                         }
-        //                     }
-        //                 })
-        //
-        //
-        //                 const subcategory7 = []
-        //                 subcategory6.forEach(item => {
-        //                     for (const sub of this.categories) {
-        //                         if (item.id === sub.parent_category_id) {
-        //
-        //                             subcategory7.push({id: sub.id, name: this.getName(sub.category_name), ...sub})
-        //                             item['children'] = subcategory7;
-        //                         }
-        //                     }
-        //                 })
-        //
-        //
-        //                 const subcategory8 = []
-        //                 subcategory7.forEach(item => {
-        //                     for (const sub of this.categories) {
-        //                         if (item.id === sub.parent_category_id) {
-        //
-        //                             subcategory8.push({id: sub.id, name: this.getName(sub.category_name), ...sub})
-        //                             item['children'] = subcategory8;
-        //                         }
-        //                     }
-        //                 })
-        //
-        //
-        //                 const subcategory9 = []
-        //                 subcategory8.forEach(item => {
-        //                     for (const sub of this.categories) {
-        //                         if (item.id === sub.parent_category_id) {
-        //
-        //                             subcategory9.push({id: sub.id, name: this.getName(sub.category_name), ...sub})
-        //                             item['children'] = subcategory9;
-        //                         }
-        //                     }
-        //                 })
-        //
-        //             }
-        //         }
-        //
-        //         return categories.sort((a, b) => {
-        //             return a.name > b.name ? 1 : -1
-        //         })
-        //     },
-        // },
 
 
     }
 </script>
-
-
-<!--<script>-->
-<!--    export default {-->
-<!--        data: () => ({-->
-<!--            breweries: [],-->
-<!--            isLoading: false,-->
-<!--            tree: [],-->
-<!--            types: [],-->
-<!--        }),-->
-
-<!--        computed: {-->
-<!--            items () {-->
-<!--                const children = this.types.map(type => ({-->
-<!--                    id: type,-->
-<!--                    name: this.getName(type),-->
-<!--                    children: this.getChildren(type),-->
-<!--                }))-->
-
-<!--                return [{-->
-<!--                    id: 1,-->
-<!--                    name: 'All Breweries',-->
-<!--                    children,-->
-<!--                }]-->
-<!--            },-->
-<!--            shouldShowTree () {-->
-<!--                return this.breweries.length > 0 && !this.isLoading-->
-<!--            },-->
-<!--        },-->
-
-<!--        watch: {-->
-<!--            breweries (val) {-->
-<!--                console.log('breweries val');-->
-<!--                console.log(val);-->
-<!--                this.types = val.reduce((acc, cur) => {-->
-<!--                    const type = cur.brewery_type-->
-
-<!--                    if (!acc.includes(type)) acc.push(type)-->
-
-<!--                    console.log('breweries acc');-->
-<!--                    console.log(acc);-->
-
-<!--                    return acc-->
-<!--                }, []).sort()-->
-<!--                console.log('this.types')-->
-<!--                console.log(this.types)-->
-<!--            },-->
-<!--        },-->
-
-<!--        methods: {-->
-<!--            fetch () {-->
-<!--                if (this.breweries.length) return-->
-
-<!--                return fetch('https://api.openbrewerydb.org/breweries')-->
-<!--                    .then(res => res.json())-->
-<!--                    .then(data => {this.breweries = data; console.log('raw data'); console.log(data)})-->
-<!--                    .catch(err => console.log(err))-->
-<!--            },-->
-<!--            getChildren (type) {-->
-<!--                const breweries = []-->
-
-<!--                for (const brewery of this.breweries) {-->
-<!--                    if (brewery.brewery_type !== type) continue-->
-
-<!--                    breweries.push({-->
-<!--                        ...brewery,-->
-<!--                        name: this.getName(brewery.name),-->
-<!--                    })-->
-<!--                }-->
-
-<!--                return breweries.sort((a, b) => {-->
-<!--                    return a.name > b.name ? 1 : -1-->
-<!--                })-->
-<!--            },-->
-<!--            getName (name) {-->
-<!--                return `${name.charAt(0).toUpperCase()}${name.slice(1)}`-->
-<!--            },-->
-<!--        },-->
-<!--    }-->
-<!--</script>-->
 
 <style scoped>
 
