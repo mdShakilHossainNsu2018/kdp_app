@@ -13,7 +13,7 @@ const store = new Vuex.Store({
     state: {
         pdf_file_name: '',
         // baseApiUrl: 'https://still-inlet-23955.herokuapp.com/',
-        baseApiUrl: 'http://164.90.238.120:8000/',
+        baseApiUrl: 'https://guarded-citadel-91993.herokuapp.com/',
         // baseApiUrl: 'http://127.0.0.1:8000/'
     },
     mutations: {
