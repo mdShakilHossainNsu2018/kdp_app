@@ -1,10 +1,14 @@
 <template>
    <v-container>
+       <v-card class="px-9 py-9">
+        <v-card-title style="margin-left: -1.2rem">QR Code Generator for KDP Books</v-card-title>
+
        <v-textarea
+
                clearable
                v-model="text"
                clear-icon="mdi-close"
-               label="QR Text"
+               label="Enter URL or Text"
                value="text"
        ></v-textarea>
 
@@ -44,10 +48,11 @@
        </v-dialog>
 
     <div class="justify-end d-flex">
-        <v-btn color="primary"
+        <v-btn
                dark
                @click.stop="dialog = true"> Generate Qr code</v-btn>
     </div>
+       </v-card>
 
    </v-container>
 

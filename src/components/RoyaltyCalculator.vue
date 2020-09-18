@@ -2,7 +2,7 @@
     <v-container>
         <v-card class="text-center px-9">
             <v-img src="../assets/kdccallogo.png" max-width="160"></v-img>
-            <H1>Royalty calculator</H1>
+            <H1>KDP Royalty calculator</H1>
 <!--            <v-row align="center">-->
 
 <!--                <v-col cols="12" sm="6">-->
@@ -37,14 +37,18 @@
 <!--                </v-col>-->
 <!--            </v-row>-->
 
-
-            printing cost: {{printingCost}}
-            <br>
-            Minimum List price: {{minimumListPrice}}
-            <br>
             Amazon Royalty: {{amazonRoyalty}}
             <br>
             Expanded Distribution royalty: {{expendedDistributionRoyalty}}
+            <br>
+            Minimum List price: {{minimumListPrice}}
+            <br>
+            printing cost: {{printingCost}}
+            <br>
+            Break even ACOS for Ads: {{BreakEvenACOS}}%
+
+
+
 
         </v-card>
 
@@ -83,6 +87,14 @@
         },
 
         computed: {
+
+            BreakEvenACOS(){
+                // amazonRoyalty/list_price
+                if (this.amazonRoyalty >0 && this.list_price >0){
+                    return ((this.amazonRoyalty / this.list_price) * 100).toFixed(2)
+                }
+                return 0;
+            },
 
     //Amazon.com
     // Paperback specifications	US marketplace (USD) fixed cost	Additional per page cost

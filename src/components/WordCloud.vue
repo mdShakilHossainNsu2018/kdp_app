@@ -38,12 +38,13 @@
         </v-row>
 
 
+        <v-card class="py-9 px-9">
 
+        <v-card-title class="font-weight-bold">Word Cloud and Word Counter Tool</v-card-title>
         <v-textarea
                 clearable
                 v-model="text"
                 clear-icon="mdi-close"
-                label="Word Cloud"
                 value="text"
         ></v-textarea>
 
@@ -51,12 +52,15 @@
             <v-tooltip bottom>
                 <template v-slot:activator="{ on, attrs }">
                     <v-btn  v-bind="attrs"
+                            dark
                             v-on="on" @click="click">Count</v-btn>
                 </template>
                 <span>Click here to count repeated word..</span>
             </v-tooltip>
 
         </div>
+
+        </v-card>
 
         <v-snackbar
                 v-model="snackbar"

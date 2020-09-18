@@ -8,7 +8,7 @@
                                 v-model="message"
                                 outlined
                                 clearable
-                                label="Search for synonyms..."
+                                label="Search for related words"
                                 type="text"
 
                         >
@@ -19,7 +19,7 @@
                                     <template v-slot:activator="{ on }">
                                         <v-icon v-on="on">mdi-help-circle-outline</v-icon>
                                     </template>
-                                    Hit enter for synonyms...
+                                    Hit enter for related words
                                 </v-tooltip>
                             </template>
                             <template v-slot:append>
@@ -32,7 +32,7 @@
                                     ></v-progress-circular>
 <!--                                    <img v-else width="24" height="24" src="https://cdn.vuetifyjs.com/images/logos/v-alt.svg" alt="">-->
                                 </v-fade-transition>
-                                <v-btn @click="clickMe" class="mb-5"><v-icon>mdi-magnify</v-icon>Search</v-btn>
+                                <v-btn @click="clickMe" dark class="mb-5"><v-icon>mdi-magnify</v-icon>Search</v-btn>
                             </template>
                         </v-text-field>
 
@@ -50,7 +50,7 @@
                         max-width="400"
                 >
                     <v-card-title class="white--text orange darken-4">
-                        All Synonyms
+                        All related words
 
                         <v-spacer></v-spacer>
 
@@ -61,7 +61,7 @@
                     </v-card-text>
 
                     <v-card-text class="pt-4" v-else>
-                        Please Search for the synonyms..
+                       Searching for related words
                     </v-card-text>
 
                     <v-divider></v-divider>
@@ -121,38 +121,6 @@
                         </v-virtual-scroll>
                     </v-card>
             </v-col>
-<!--            <v-col>-->
-<!--                <v-card-->
-<!--                        class="mx-auto"-->
-<!--                        max-width="400"-->
-<!--                >-->
-<!--                    <v-card-title class="white&#45;&#45;text orange darken-4">-->
-<!--                        All Meanings-->
-
-<!--                        <v-spacer></v-spacer>-->
-<!--                    </v-card-title>-->
-
-<!--                    <v-card-text class="pt-4">-->
-<!--                        ceat, eos impedit nulla quos? Officiis, aperiam ducimus.-->
-<!--                    </v-card-text>-->
-
-<!--                    <v-divider></v-divider>-->
-
-<!--                    <v-virtual-scroll-->
-<!--                            :items="getMeanings"-->
-<!--                            :item-height="50"-->
-<!--                            height="300"-->
-<!--                    >-->
-<!--                        <template v-slot="{ item }">-->
-<!--                            <v-list-item>-->
-<!--                                <v-list-item-content>-->
-<!--                                    <v-list-item-title>{{ item }}</v-list-item-title>-->
-<!--                                </v-list-item-content>-->
-<!--                            </v-list-item>-->
-<!--                        </template>-->
-<!--                    </v-virtual-scroll>-->
-<!--                </v-card>-->
-<!--            </v-col>-->
         </v-row>
 
     </v-container>
@@ -168,25 +136,6 @@
             respondedData: []
         }),
 
-        computed: {
-            // getMeanings(){
-            //     const meanings = []
-            //     console.log('noun')
-            //
-            //     if (this.respondedData.length){
-            //         this.respondedData.meaning.Noun.forEach(item=>{
-            //             meanings.push(item)
-            //         });
-            //
-            //         this.respondedData.meaning.Verb.forEach(item=>{
-            //             meanings.push(item)
-            //         })
-            //     }
-            //     console.log(this.respondedData)
-            //     console.log(meanings)
-            //     return meanings;
-            // }
-        },
 
         methods: {
             clickMe () {
