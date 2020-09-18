@@ -1,7 +1,7 @@
 <template>
     <v-container>
         <v-card class="text-center px-9">
-            <v-img src="../assets/kdccallogo.png" max-width="150" class="pt-4"></v-img>
+            <v-img src="../assets/kdccallogo.png" max-width="160"></v-img>
             <H1>Royalty calculator</H1>
 <!--            <v-row align="center">-->
 
