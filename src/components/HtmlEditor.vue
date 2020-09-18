@@ -1,17 +1,23 @@
 <template>
-    <div >
+    <v-container class="px-16" >
 
 
 
         <v-row>
-            <v-dialog v-model="dialog" width="600px">
+<!--            <v-col>-->
+
+
+            <v-dialog v-model="dialog"  width="600px">
                 <template v-slot:activator="{ on, attrs }">
                     <v-row>
-                        <v-col>
-                            <H1>KDP HTML Descriptor Format Editor</H1>
-                            <vue-editor  v-model="content" :editorToolbar="customToolbar"></vue-editor>
+                        <v-col width="200">
+                            <v-card class="px-9 py-9">
+
+
+                            <H1 class="px-9">KDP HTML Descriptor Format Editor</H1>
+                            <vue-editor class="px-9"  v-model="content" :editorToolbar="customToolbar"></vue-editor>
                                 <div class="d-flex justify-end">
-                                    <v-btn class="mt-2"
+                                    <v-btn class="mt-2 mr-8"
                                            dark
                                            v-bind="attrs"
                                            v-on="on"
@@ -21,7 +27,7 @@
                                     </v-btn>
                                 </div>
 
-
+                            </v-card>
                         </v-col>
                     </v-row>
 
@@ -38,9 +44,10 @@
                     </v-card-actions>
                 </v-card>
             </v-dialog>
+<!--            </v-col>-->
         </v-row>
 
-    </div>
+    </v-container>
 </template>
 
 <script>
@@ -96,9 +103,9 @@
         mounted(){
             // console.log(document.getElementsByClassName('ql-formats')[0])
             // document.getElementsByClassName('ql-formats')[0].getElementsByClassName('ql-header')[2].innerHTML = '<b>H3</b>'
-            document.getElementsByClassName('ql-formats')[0].getElementsByClassName('ql-header')[0].innerHTML = '<b>H4</b>'
-            document.getElementsByClassName('ql-formats')[0].getElementsByClassName('ql-header')[1].innerHTML = '<b>H5</b>'
-            document.getElementsByClassName('ql-formats')[0].getElementsByClassName('ql-header')[2].innerHTML = '<b>H6</b>'
+            document.getElementsByClassName('ql-formats')[0].getElementsByClassName('ql-header')[0].innerHTML = '<b style="display: inline-block !important;">H4</b>'
+            document.getElementsByClassName('ql-formats')[0].getElementsByClassName('ql-header')[1].innerHTML = '<b style="display: inline-block !important;">H5</b>'
+            document.getElementsByClassName('ql-formats')[0].getElementsByClassName('ql-header')[2].innerHTML = '<b style="display: inline-block !important;">H6</b>'
             // this.$refs.editor.$el = '<h1>hi</h1>'
             // console.log(this.$refs.editor.$el)
         }

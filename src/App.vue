@@ -74,7 +74,7 @@
                             <v-img v-if="item.text==='KDP HTML Description'" src="../src/assets/icons/4.png" ></v-img>
                             <v-img v-if="item.text==='KDP Royalty Calculator'" src="../src/assets/icons/7.png" ></v-img>
                             <v-img v-if="item.text==='Title Capitalization'" src="../src/assets/icons/2.png" ></v-img>
-                            <v-img v-if="item.text==='PDF'" src="../src/assets/icons/5.png" ></v-img>
+                            <v-img v-if="item.text==='PDF Combiner'" src="../src/assets/icons/5.png" ></v-img>
                             <v-img v-if="item.text==='Category Lists'" src="../src/assets/icons/6.png" ></v-img>
                             <v-img v-if="item.text==='QR Code Generator'" src="../src/assets/icons/qr.png" ></v-img>
                             <v-img v-if="item.text==='Similar Keywords'" src="../src/assets/icons/3.png" ></v-img>
@@ -153,7 +153,7 @@
                 { icon: '7.png', text: 'KDP Royalty Calculator', link: '/royalty-calculator' },
                 // { heading: 'Labels' },
                 { icon: '2.png', text: 'Title Capitalization', link: '/title-generator' },
-                { icon: '../src/assets/icons/5.png', text: 'PDF', link: '/pdf-combiner' },
+                { icon: '../src/assets/icons/5.png', text: 'PDF Combiner', link: '/pdf-combiner' },
 
                 { icon: '../src/assets/icons/qr.png', text: 'QR Code Generator', link: '/qr-generator' },
                 { icon: '../src/assets/icons/3.png', text: 'Similar Keywords', link: '/synonyms-creator' },

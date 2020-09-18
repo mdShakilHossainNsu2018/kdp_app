@@ -49,7 +49,7 @@
                         class="mx-auto"
                         max-width="400"
                 >
-                    <v-card-title class="white--text orange darken-4">
+                    <v-card-title class="white--text black darken-4">
                         All related words
 
                         <v-spacer></v-spacer>
@@ -83,44 +83,44 @@
                     </v-virtual-scroll>
                 </v-card>
             </v-col>
-            <v-col>
-                    <v-card
-                            class="mx-auto"
-                            max-width="400"
-                    >
-                        <v-card-title class="white--text orange darken-4">
-                            All Antonyms
+<!--            <v-col>-->
+<!--                    <v-card-->
+<!--                            class="mx-auto"-->
+<!--                            max-width="400"-->
+<!--                    >-->
+<!--                        <v-card-title class="white&#45;&#45;text orange darken-4">-->
+<!--                            All Antonyms-->
 
-                            <v-spacer></v-spacer>
-                        </v-card-title>
+<!--                            <v-spacer></v-spacer>-->
+<!--                        </v-card-title>-->
 
-                        <v-card-text class="pt-4" v-if="respondedData.length !== 0">
-                            Antonyms results For the {{respondedData.word}}
-                        </v-card-text>
+<!--                        <v-card-text class="pt-4" v-if="respondedData.length !== 0">-->
+<!--                            Antonyms results For the {{respondedData.word}}-->
+<!--                        </v-card-text>-->
 
-                        <v-card-text class="pt-4" v-else>
-                            Please Search for the antonyms..
-                        </v-card-text>
+<!--                        <v-card-text class="pt-4" v-else>-->
+<!--                            Please Search for the antonyms..-->
+<!--                        </v-card-text>-->
 
-                        <v-divider></v-divider>
+<!--                        <v-divider></v-divider>-->
 
-                        <v-virtual-scroll
-                                :items="respondedData.antonym"
-                                :item-height="50"
-                                height="300"
-                                v-if="respondedData.length !== 0"
-                        >
-                            <template v-slot="{ item }">
-                                <v-list-item>
-                                    <v-list-item-content>
-                                        <v-list-item-title>{{ item }}</v-list-item-title>
-                                    </v-list-item-content>
+<!--                        <v-virtual-scroll-->
+<!--                                :items="respondedData.antonym"-->
+<!--                                :item-height="50"-->
+<!--                                height="300"-->
+<!--                                v-if="respondedData.length !== 0"-->
+<!--                        >-->
+<!--                            <template v-slot="{ item }">-->
+<!--                                <v-list-item>-->
+<!--                                    <v-list-item-content>-->
+<!--                                        <v-list-item-title>{{ item }}</v-list-item-title>-->
+<!--                                    </v-list-item-content>-->
 
-                                </v-list-item>
-                            </template>
-                        </v-virtual-scroll>
-                    </v-card>
-            </v-col>
+<!--                                </v-list-item>-->
+<!--                            </template>-->
+<!--                        </v-virtual-scroll>-->
+<!--                    </v-card>-->
+<!--            </v-col>-->
         </v-row>
 
     </v-container>

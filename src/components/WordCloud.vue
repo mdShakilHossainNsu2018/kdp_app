@@ -1,5 +1,5 @@
 <template>
-    <v-container>
+    <v-container class="px-16">
         <v-row>
             <v-col>
                 <vue-word-cloud style="height: 480px; width: 640px;"

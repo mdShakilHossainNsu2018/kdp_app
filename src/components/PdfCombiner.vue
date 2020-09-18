@@ -1,7 +1,7 @@
 <template>
-    <v-container>
+    <v-container class="px-16">
         <v-card class="text-center px-9 py-9">
-            <h1>Pdf Combiner</h1>
+            <h1>PDF Combiner</h1>
             <v-file-input v-model="file" type="file" clearable label="File input"></v-file-input>
             <p v-for="(file, index) in file" :key="index">{{file[index].name}}</p>
 

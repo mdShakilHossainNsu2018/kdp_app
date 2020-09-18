@@ -1,5 +1,5 @@
 <template>
-   <v-container>
+   <v-container class="px-16">
        <v-card class="px-9 py-9">
         <v-card-title style="margin-left: -1.2rem">QR Code Generator for KDP Books</v-card-title>
 

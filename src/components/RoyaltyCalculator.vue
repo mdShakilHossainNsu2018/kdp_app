@@ -1,7 +1,7 @@
 <template>
-    <v-container>
-        <v-card class="text-center px-9">
-            <v-img src="../assets/kdccallogo.png" max-width="160"></v-img>
+    <v-container class="px-16">
+        <v-card class="text-center px-16 py-9">
+<!--            <v-img src="../assets/kdccallogo.png" max-width="160"></v-img>-->
             <H1>KDP Royalty calculator</H1>
 <!--            <v-row align="center">-->
 

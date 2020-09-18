@@ -1,5 +1,5 @@
 <template>
-    <v-container>
+    <v-container class="px-16">
         <v-card class=" px-9 py-9">
             <h1>Title Generator</h1>
 
