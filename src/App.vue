@@ -5,22 +5,15 @@
                 dark
         >
             <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-<!--            <v-toolbar-title>Application</v-toolbar-title>-->
+<!--            <v-toolbar-title style="color: rgb(242, 192, 22)">Self Publishing Titans</v-toolbar-title>-->
+            <v-toolbar-title ><v-img max-width="150" src="../src/assets/text.png"></v-img></v-toolbar-title>
 
-<!--            <v-btn to="/" fab tile icon class="title ml-3 mr-5"><v-img-->
-
-<!--                    class="mx-2"-->
-<!--                    src="../src/assets/final_logologoblack.png"-->
-<!--                    max-height="40"-->
-<!--                    max-width="40"-->
-<!--                    contain-->
-<!--            ></v-img></v-btn>-->
         </v-app-bar>
 
         <v-navigation-drawer
                 v-model="drawer"
                 app
-                dark
+                color="#23282d"
 
         >
             <v-list
@@ -139,5 +132,12 @@
 <style>
     #keep .v-navigation-drawer__border {
         display: none
+    }
+    /*body{*/
+    /*    background-color: black !important;*/
+    /*}*/
+
+    .v-application {
+        background-color: #f1f5f8 !important;
     }
 </style>
