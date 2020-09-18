@@ -1,9 +1,13 @@
 <template>
-    <v-container>
+    <v-container class="px-16 py-16">
+        <v-card>
         <v-form v-on:submit.prevent="clickMe">
             <v-container style="max-width: 50%">
                 <v-row>
                     <v-col cols="12">
+
+
+
                         <v-text-field
                                 v-model="message"
                                 outlined
@@ -82,6 +86,8 @@
                         </template>
                     </v-virtual-scroll>
                 </v-card>
+
+
             </v-col>
 <!--            <v-col>-->
 <!--                    <v-card-->
@@ -122,7 +128,7 @@
 <!--                    </v-card>-->
 <!--            </v-col>-->
         </v-row>
-
+        </v-card>
     </v-container>
 </template>
 
